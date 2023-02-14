@@ -4,7 +4,7 @@ import { oakCors } from "https://deno.land/x/cors@v1.2.2/mod.ts";
 const app = new Application().use(oakCors());
 
 app.addEventListener("listen", ({ port }) => {
-  console.log("App listening at: "+port);
+  console.log("App listening at: " + port);
 });
 
 const router = new Router();
@@ -20,5 +20,5 @@ router
 app
   .use(router.routes())
   .use(router.allowedMethods())
-  .listen({ port:4000 })
+  .listen({ port: 80 })
 
